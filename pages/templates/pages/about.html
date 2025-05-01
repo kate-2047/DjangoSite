@@ -1,0 +1,41 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-banner">
+    <h1>About Us</h1>
+</div>
+
+<table class="two-col-section">
+    <!-- first section - for about the bldg and co -->
+    <tr>
+        <td class="text-col">
+            {% for paragraph in team.about %}
+            <p style="text-indent: 2em; ">{{ paragraph }}</p>
+            {% endfor %}
+        </td>
+        <td class="image-col">
+            <img src="{% static 'image/BuildingPhoto.jpg' %}">
+        </td>
+    </tr>
+
+    <!-- second section - for about founder and vp -->
+    {% for member in team.member %}
+    <tr>
+        <td class="text-col" >
+            <h2>{{member.name}} | {{member.role}}</h2>
+            <p style="text-indent: 2em;">{{member.about}}</p>
+        </td>
+        <td class="image-col">
+            <img src="{% static member.photo %}" alt="{{member.name}}">
+        </td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-banner">
+    <h1>Contact Us</h1>
+</div>
+
+<a href="{% url 'contactform' %}"> 
+    <button class="btn">Get in Touch</button>
+</a>
+
+
+<table class="two-col-section" style="margin: 0 auto;">
+    <tr>
+        <td class="text-col" style="text-align: right;">
+            <p><i class="fa fa-phone"></i>   <strong>Phone</strong><br>(315) 733 - 9000</p>
+            <p><i class="fa fa-map-marker"></i>  <strong>Address</strong><br>18 South St, Utica, NY 13501</p>
+            <p><i class="fa fa-thumbs-up"></i>  <strong>Social Media</strong><br>
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+        </td>
+        <td class="image-col">
+            <img src="{% static 'image/BuildingPhoto.jpg' %}" alt="Office"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-col" colspan="2">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2913.3325541530926!2d-75.23879022385243!3d43.09752567113393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d94728001b79e7%3A0xb357685046c4712a!2sTowne%20Engineering!5e0!3m2!1sen!2sus!4v1745945316940!5m2!1sen!2sus" width="600" height="450" style="border:0; margin: 0 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+{% endblock %}

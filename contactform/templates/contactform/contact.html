@@ -1,0 +1,27 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="page-banner">
+    <h1>Get in Touch</h1>
+</div>
+
+{% if submitted %}
+<div class="thank">
+    <p>Thank you for reaching out.<br>We will contact you shortly.</p>
+</div>
+<a href="{% url 'home' %}"> 
+    <button class="btn">Home</button>
+</a>
+
+{% else %}
+    <form method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit'>Submit</button>
+    </form>
+{% endif %}
+
+{% endblock %}

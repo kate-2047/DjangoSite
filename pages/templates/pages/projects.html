@@ -1,0 +1,36 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-banner">
+    <h1>Projects</h1>
+</div>
+
+<!-- first section - for project blurb -->
+<tr>
+    <td class="text-col" style="padding-top: 25px;">
+        {% for paragraph in portfolio.about %}
+        <h3 style="text-indent: 2em; width: 450px; padding-left: 250px; padding-top: 20px">{{ paragraph }}</h3>
+        {% endfor %}
+    </td>
+</tr>
+
+<table class="two-col-section" style="margin: 0 auto;">
+    <!-- second section - for project and picture -->
+    {% for project in portfolio.project %}
+    <tr>
+        <td class="text-col">
+            <h2 style="text-align: right; padding-right: 30px; width: 200px;">{{project.name}}</h2>
+            <p class="paragraph" style="text-indent: 2em; text-align: right; padding-right: 30px; ">{{project.about}}</p>
+        </td>
+        <td class="image-col">
+            <img src="{% static project.photo %}" alt="{{project.name}}" style="height: 400px;">
+        </td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+
+{% endblock %}

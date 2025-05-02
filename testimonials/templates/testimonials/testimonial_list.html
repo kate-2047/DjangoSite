@@ -1,0 +1,22 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content%}
+<div class="page-banner">
+    <h1>Testimonials</h1>
+</div>
+
+<div class="testimonial-container"> 
+    {% for testimonial in testimonials %}
+    <div class="testimonial-box">
+        <h3 class="testimonial-name">{{ testimonial.name }}</h3>
+        <p class="testimonial-date"><em>{{ testimonial.created_at|date:"F Y"}}</em></p>
+        <p class="testimonial-message">{{ testimonial.message }}</p>
+    </div>
+</div>
+
+{% empty %}
+<p>No testimonials yet.</p>
+{% endfor %}
+
+{% endblock %}

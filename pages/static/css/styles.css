@@ -101,6 +101,24 @@ button, .btn {
     cursor: pointer;
     font-weight: 600;
 }
+ /* button on home page slideshow */
+.overlay-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background-color: #162642;
+    color: #f9f9f9;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.overlay-button:hover {
+    background-color: #A0CBE3;
+    color: #162642;
+}
 
 button:hover, .btn:hover {
     background-color: #A0CBE3;
@@ -117,8 +135,9 @@ button:hover, .btn:hover {
 
 /* slideshow on home page */
 .slideshow-container {
+    position: relative;
     max-width: 1000px;
-    height: 600px;
+    height: 500px;
     margin: 10px auto;
     overflow: hidden;
     border-radius: 10px;
@@ -178,4 +197,49 @@ button:hover, .btn:hover {
 .two-col-section .map-container iframe {
     display: block;
     margin: 0 auto;
+}
+
+/* testimonials app pages */
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900 px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.testimonial-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.testimonial-message {
+    margin-bottom: 10px;
+    color: #757575;
+    text-indent: 1.5em;
+}
+
+.testimonial-name {
+    font-weight: 600;
+    text-align: left;
+    font-size: 20px;
+    color: #162642;
+}
+
+.testimonial-date {
+    text-align: left;
+    font-size: 16px;
+    color: #162642;
+    margin-top: -10px;
+}
+
+.button-section {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

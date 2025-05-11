@@ -11,31 +11,26 @@
     <!-- first section - for about the bldg and co -->
     <tr>
         <td class="text-col">
-            {% for paragraph in team.about %}
-            <p style="text-indent: 2em; ">{{ paragraph }}</p>
-            {% endfor %}
+            <p style="text-indent: 2em; ">{{ paragraph.paragraph }}</p>
         </td>
         <td class="image-col">
-            <img src="{% static 'image/BuildingPhoto.jpg' %}">
+            <img src="{{ project.photo.url }}" alt="{{ project.name }}">
         </td>
     </tr>
 
     <!-- second section - for about founder and vp -->
-    {% for member in team.member %}
+    {% for person in team %}
     <tr>
         <td class="text-col" >
-            <h2>{{member.name}} | {{member.role}}</h2>
-            <p style="text-indent: 2em;">{{member.about}}</p>
+            <h2>{{ person.name }} | {{ person.role }}</h2>
+            <p style="text-indent: 2em;">{{ person.bio }}</p>
         </td>
         <td class="image-col">
-            <img src="{% static member.photo %}" alt="{{member.name}}">
+            <img src="{{ person.photo.url }}" alt="{{ person.name }}">
         </td>
     </tr>
     {% endfor %}
 
-
 </table>
-
-
 
 {% endblock %}

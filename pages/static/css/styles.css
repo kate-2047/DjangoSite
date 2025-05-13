@@ -91,6 +91,12 @@ footer {
     margin-top: 2em;
 }
 
+footer i {
+    color:white;
+    width:30px;
+    font-size: 1.5em;
+}
+
 /* buttons */
 button, .btn {
     background-color: #162642;
@@ -183,6 +189,7 @@ button:hover, .btn:hover {
     padding: 15px;
 }
 
+
 /* contact us page */
 .two-col-section .text-col p {
     margin: 0;
@@ -197,6 +204,13 @@ button:hover, .btn:hover {
 .two-col-section .map-container iframe {
     display: block;
     margin: 0 auto;
+}
+
+.two-col-section .text-col a {
+    width:35px;
+    font-size: 1.5em;
+    color: #162642;
+
 }
 
 /* testimonials app pages */

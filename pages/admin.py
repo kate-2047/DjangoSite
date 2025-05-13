@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ProjectIntro, Project, TeamMember
+from .models import ProjectIntro, Project, TeamMember, AboutCo
 
 # Register your models here.
 
@@ -10,3 +10,4 @@ from .models import ProjectIntro, Project, TeamMember
 admin.site.register(Project)
 admin.site.register(ProjectIntro)
 admin.site.register(TeamMember)
+admin.site.register(AboutCo)

@@ -20,10 +20,11 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('pages.urls')),
-    path('contact/', include('contactform.urls')),
-    path('testimonial/', include('testimonials.urls')),
+    path('admin/', admin.site.urls), # admin site
+    path('', include('pages.urls')), # for main app, html pages
+    path('contact/', include('contactform.urls')), # for contact form app
+    path('testimonial/', include('testimonials.urls')), # for testimonials app
+    path('email/', include('emailservice.urls')), # for email app
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

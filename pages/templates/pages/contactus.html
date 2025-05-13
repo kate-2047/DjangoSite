@@ -15,6 +15,13 @@
 </div>
 
 <div class="button-section">
+    <h2>Send Us an Email</h2>
+    <a href="{% url 'send_email' %}"> 
+        <button class="btn">Get in Touch</button>
+    </a>
+</div>
+
+<div class="button-section">
     <h2>Leave us a message</h2>
     <a href="{% url 'testimonial' %}">
         <button class="btn">Testimonials</button>
@@ -24,15 +31,15 @@
 
 <table class="two-col-section" style="margin: 0 auto;">
     <tr>
-        <td class="text-col" style="text-align: right;">
+        <td class="text-col" style="text-align: right; text-size: 2em;">
             <p><i class="fa fa-phone"></i>   <strong>Phone</strong><br>(315) 733 - 9000</p>
             <p><i class="fa fa-map-marker"></i>  <strong>Address</strong><br>18 South St, Utica, NY 13501</p>
             <p><i class="fa fa-thumbs-up"></i>  <strong>Social Media</strong><br>
-                <a href=""><i class="fab fa-facebook-square"></i></a>
-                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/TowneEngineering/"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.linkedin.com/company/towne-engineering-p-c/"><i class="fab fa-linkedin"></i></a>
         </td>
         <td class="image-col">
-            <img src="{% static 'image/BuildingPhoto.jpg' %}" alt="Office"/>
+            <img src="{% static 'images/BuildingPhoto.jpg' %}" alt="Office"/>
         </td>
     </tr>
     <tr>

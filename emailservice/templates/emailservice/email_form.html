@@ -1,0 +1,22 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h2>Send Us an Email</h2>
+
+{% if sent %}
+    <p>Your email has been sent. Thank you.</p>
+{% else%}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+    </form>
+{% endif %}
+
+<a href="{% url 'contactus' %}"> 
+    <button class="btn">Back to Contact Us</button>
+</a>
+
+{% endblock %}

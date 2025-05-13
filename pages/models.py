@@ -1,9 +1,9 @@
 from django.db import models
 
-
 # About page
 class AboutCo(models.Model):
     paragraph = models.TextField()
+    image = models.ImageField(upload_to='image/', null=True, blank=True)
 
     def __str__(self):
         return self.paragraph[:50] + "..." # preview in admin

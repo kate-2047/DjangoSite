@@ -1,0 +1,259 @@
+/* defaults */
+body {
+    margin: 0;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: 300;
+    background-color: white;
+    color: black;
+}
+
+/* content won't stretch more than 80% of the screen width
+.content-wrapper {
+    max-width: 80%;
+    margin: 0;
+    padding: 20px;
+}
+*/
+
+p {
+    color: #757575;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #162642;
+}
+
+/* header */
+header {
+    margin: 0;
+    color: black;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.logo {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+header nav {
+    margin-top: .5em;
+}
+
+header nav a {
+    color: #162642;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* main contents */
+main {
+    padding: 2em;
+}
+
+/* footer */
+footer {
+    background-color: #162642;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 2em;
+}
+
+footer i {
+    color:white;
+    width:30px;
+    font-size: 1.5em;
+}
+
+/* buttons */
+button, .btn {
+    background-color: #162642;
+    color: white;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+ /* button on home page slideshow */
+.overlay-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background-color: #162642;
+    color: #f9f9f9;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.overlay-button:hover {
+    background-color: #A0CBE3;
+    color: #162642;
+}
+
+button:hover, .btn:hover {
+    background-color: #A0CBE3;
+    color: #162642;
+}
+
+/* header when window resize */
+@media (max-width: 600px) {
+    header nav a {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+/* slideshow on home page */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    height: 500px;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f0f0f0;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* all pages */
+.page-banner {
+    width: 100%;
+    background-color: #A0CBE3;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.page-banner h1 {
+    color: #162642;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+
+/* about and project pages */
+.two-col-section {
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.two-col-section .image-col img {
+    height: 400px; 
+    padding: 15px;
+}
+
+
+/* contact us page */
+.two-col-section .text-col p {
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.text-col strong {
+    font-weight: 600;
+}
+
+.two-col-section .map-container iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.two-col-section .text-col a {
+    width:35px;
+    font-size: 1.5em;
+    color: #162642;
+
+}
+
+/* testimonials app pages */
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900 px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.testimonial-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.testimonial-message {
+    margin-bottom: 10px;
+    color: #757575;
+    text-indent: 1.5em;
+}
+
+.testimonial-name {
+    font-weight: 600;
+    text-align: left;
+    font-size: 20px;
+    color: #162642;
+}
+
+.testimonial-date {
+    text-align: left;
+    font-size: 16px;
+    color: #162642;
+    margin-top: -10px;
+}
+
+.button-section {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -19,7 +19,7 @@ def send_email_view(request):
 
         # form the message and send
         send_mail(
-            subject="New Email from Website",
+            subject="New Email from Towne Engineering Website",
             message=full_message,
             from_email=settings.DEFAULT_FROM_EMAIL,
             recipient_list=[settings.EMAIL_HOST_USER],

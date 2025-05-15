@@ -15,7 +15,7 @@
             <p style="text-indent: 2em; ">{{ paragraph.paragraph }}</p>
         </td>
         <td class="image-col">
-            <img src="{{ about.image.url }}" alt="Building Photo">
+            <img src="{{ paragraph.image.url }}" alt="Building Photo">
         </td>
     </tr>
 
@@ -27,7 +27,7 @@
             <p style="text-indent: 2em;">{{ person.bio }}</p>
         </td>
         <td class="image-col">
-            <img src="{{ person.photo.url }}" alt="{{ person.name }}">
+            <img src="{{ person.image.url }}" alt="{{ person.name }}">
         </td>
     </tr>
     {% endfor %}

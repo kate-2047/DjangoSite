@@ -3,7 +3,7 @@ from django.db import models
 # About page
 class AboutCo(models.Model):
     paragraph = models.TextField()
-    image = models.ImageField(upload_to='image/', null=True, blank=True)
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
 
     def __str__(self):
         return self.paragraph[:50] + "..." # preview in admin
@@ -28,7 +28,7 @@ class ProjectIntro(models.Model):
 class Project(models.Model):
     name = models.CharField(max_length=200)
     about = models.TextField()
-    photo = models.ImageField(upload_to='image/', null=True, blank=True)
+    photo = models.ImageField(upload_to='images/', null=True, blank=True)
 
     def __str__(self):
         return self.name

@@ -1,0 +1,32 @@
+# gitignore file for DjangoSite repo
+# kate-2047/DjangoSite
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Django database
+db.sqlite3
+
+# media files, uploaded and local
+media/
+pages/media
+
+# static files
+staticfiles/
+
+# virtual environment
+venv/
+env/
+
+# VS Code and editor config
+.vscode/
+*.code-workspace
+
+# logs
+*.log
+
+# OS/system files
+.DS_Store
+Thumbs.db
